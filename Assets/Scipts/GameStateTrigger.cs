@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameStateTrigger : MonoBehaviour
 {
-    GameS
+    GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameState = FindObjectOfType<GameState>();
     }
 
     // Update is called once per frame
@@ -16,11 +16,11 @@ public class GameStateTrigger : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-
+            gameState.boomBoxOn = true;
         }
     }
 }
