@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameState : MonoBehaviour
 {
     public bool boomBoxOn;
 
+    public GameObject alertSlide;
+
     private float cameraMoveSpeed = 2;
-    private bool firstAlerted = false;
-    private bool unAlerted = true;
+    private bool firstAlerted;
+    private bool unAlerted;
     private NpcController[] enemies;
     private PlayerController player;
     private GameObject cameraPivot;
@@ -19,12 +22,15 @@ public class GameState : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         boomBoxOn = false;
+        unAlerted = true;
+        firstAlerted = false;
         enemies = FindObjectsOfType<NpcController>();
         cameraPivot = GameObject.Find("CameraPivot");
         cameraController = FindObjectOfType<CameraController>();
+
     }
 
-    // Update is called once per frame
+        // Update is called once per frame
     void Update()
     {
         switch (boomBoxOn)
@@ -33,7 +39,7 @@ public class GameState : MonoBehaviour
                 player.boomBoxOn = true;
                 if (unAlerted)
                 {
-                    StartCoroutine(EnemyAlerted(8));
+                    StartCoroutine(EnemyAlerted(5));
                 }
                 break;
             case false:
@@ -42,11 +48,11 @@ public class GameState : MonoBehaviour
         }
         if (boomBoxOn)
         {
-  
+
         }
         if (firstAlerted)
         {
-            cameraPivot.transform.position = Vector3.MoveTowards(cameraPivot.transform.position, closestEnemy.transform.position, cameraMoveSpeed *Time.deltaTime);
+            cameraPivot.transform.position = Vector3.MoveTowards(cameraPivot.transform.position, closestEnemy.transform.position, cameraMoveSpeed * Time.deltaTime);
         }
     }
     GameObject GetClosestEnemy()
@@ -68,11 +74,14 @@ public class GameState : MonoBehaviour
         unAlerted = false;
         player.canMove = false;
         cameraController.firstAlerted = true;
+        alertSlide.SetActive(true);
         closestEnemy = GetClosestEnemy();
         closestEnemy.GetComponent<NpcController>().alert = true;
         closestEnemy.GetComponent<NpcController>().canMove = false;
         firstAlerted = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time / 2);
+        Debug.Log(alertSlide.activeSelf);
+        yield return new WaitForSeconds(time / 2);
         cameraController.firstAlerted = false;
         firstAlerted = false;
         player.canMove = true;
@@ -81,5 +90,5 @@ public class GameState : MonoBehaviour
         {
             enemy.alert = true;
         }
-    }
+    }   
 }
