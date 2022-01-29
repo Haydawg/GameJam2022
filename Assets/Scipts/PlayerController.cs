@@ -61,44 +61,21 @@ public class PlayerController : MonoBehaviour
         moveTo += (transform.forward * z * playerSpeed * Time.deltaTime);
         moveTo += (transform.right * x * playerSpeed * Time.deltaTime);
         
-        if (moveTo == Vector3.zero)
-        {
-            anim.speed = 0;
-            Debug.Log(anim.speed);
-        }
-        else
-        {
-            anim.speed = 1;
-        }
         if (canMove)
         {
             controller.Move(moveTo);
-            anim.speed = 1;
-        }
-        else
-        {
-            anim.speed = 0;
         }
 
-        // flip sprite to match move direction
-        if (moveTo.x > 0)
+        anim.SetFloat("MoveX", x);
+        anim.SetFloat("MoveZ", z);
+ 
+        if (x > 0)
         {
             spriteRenderer.flipX = true;
         }
-        else if (moveTo.x < 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        //set animation parameters based of the move direction
-        if (spriteRenderer.flipX == false)
-        {
-            anim.SetFloat("MoveX", x);
-            anim.SetFloat("MoveZ", z);
-        }
         else
         {
-            anim.SetFloat("MoveX", -x);
-            anim.SetFloat("MoveZ", z);
+            spriteRenderer.flipX = false;
         }
 
         if (Input.GetKeyDown(KeyCode.E))

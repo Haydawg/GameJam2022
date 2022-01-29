@@ -63,37 +63,28 @@ public class NpcController : MonoBehaviour
             moveTo = (player.transform.position);
             if (canMove)
             {
-                agent.speed = 2;
+                agent.SetDestination(moveTo);
             }
             else
             {
-                agent.speed = 0;
+                agent.SetDestination(transform.position);
             }
         }
-
+        agent.SetDestination(moveTo);
         moveTo.y = transform.position.y;
-        agent.destination = moveTo;
         direction = agent.velocity.normalized;
-        // flip sprite to match move direction
+
         if (direction.x > 0)
         {
             spriteRenderer.flipX = true;
         }
-        else if (direction.x < 0)
+        else
         {
             spriteRenderer.flipX = false;
         }
-        //set animation parameters based of the move direction
-        if (spriteRenderer.flipX == false)
-        {
-            anim.SetFloat("MoveX", direction.x);
-            anim.SetFloat("MoveZ", direction.z);
-        }
-        else
-        {
-            anim.SetFloat("MoveX", -direction.x);
-            anim.SetFloat("MoveZ", direction.z);
-        }
+        anim.SetFloat("MoveX", direction.x);
+        anim.SetFloat("MoveZ", direction.z);
+
         //rotate to face camera at the same time player does
         if (Input.GetKeyDown(KeyCode.E))
         {
