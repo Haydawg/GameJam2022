@@ -54,7 +54,7 @@ public class GameState : MonoBehaviour
         float minDistance = Mathf.Infinity;
         foreach (NpcController enemy in enemies)
         {
-            float distance = Vector3.Distance(enemy.gameObject.transform.position, transform.position);
+            float distance = Vector3.Distance(enemy.gameObject.transform.position, player.transform.position);
             if (distance < minDistance)
             {
                 closestEnemy = enemy.gameObject;

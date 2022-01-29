@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class GameStateTrigger : MonoBehaviour
 {
-    public Vector3[] triggerLocations;
+    public GameObject[] triggerLocations;
     GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
         gameState = FindObjectOfType<GameState>();
+        transform.position = triggerLocations[Random.Range(0, triggerLocations.Length)].transform.position;
     }
 
     // Update is called once per frame
