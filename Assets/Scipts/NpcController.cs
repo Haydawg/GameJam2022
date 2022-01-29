@@ -77,7 +77,7 @@ public class NpcController : MonoBehaviour
         agent.SetDestination(moveTo);
         moveTo.y = transform.position.y;
         direction = agent.velocity.normalized;
-
+        Debug.Log(agent.velocity.normalized);
         if (direction.x > 0)
         {
             spriteRenderer.flipX = true;
