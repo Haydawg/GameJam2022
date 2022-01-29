@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         {
             case true:
                 anim.SetBool("isRunning", true);
-                controller.height = 1.0f;
+                controller.height = 0.8f;
                 playerSpeed = 2;
                 //feet.clip = loudFootStepClips[Random.Range(0, loudFootStepClips.Length)];
                 boomBoxAudio.volume = boomBoxVolume;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
              case false:
                 anim.SetBool("isRunning", false);
-                controller.height = 0.75f;
+                controller.height = 0.60f;
                 playerSpeed = 1;
                 //feet.clip = quietFootStepClips[Random.Range(0, quietFootStepClips.Length)];
                 if (boomBoxAudio.isPlaying)
