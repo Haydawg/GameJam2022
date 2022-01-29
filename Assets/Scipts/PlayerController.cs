@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private CharacterController controller;
     private Animator anim;
-    
+    Vector3 rotationVector = new Vector3(0, 0, 0);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,14 +84,17 @@ public class PlayerController : MonoBehaviour
         }
 
 
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
-            transform.Rotate(0, 45, 0);
+            rotationVector.y += 45;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            transform.Rotate(0, -45, 0);
+            rotationVector.y -= 45;
         }
 
+        Quaternion rotation = Quaternion.Euler(rotationVector);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.time * 0.01f);
     }
 }

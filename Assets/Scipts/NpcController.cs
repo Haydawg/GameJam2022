@@ -10,7 +10,6 @@ public class NpcController : MonoBehaviour
     public GameObject[] patrolLocations;
     public bool canMove = true;
  
-
     private GameObject player;
     private int currentPatrolLocation = 0;
     private SpriteRenderer spriteRenderer;
@@ -78,7 +77,6 @@ public class NpcController : MonoBehaviour
         moveTo.y = transform.position.y;
         //direction = agent.velocity.normalized;
         direction = transform.InverseTransformDirection(agent.velocity.normalized);
-        Debug.Log(direction);
         if (direction.x > 0)
         {
             spriteRenderer.flipX = true;
