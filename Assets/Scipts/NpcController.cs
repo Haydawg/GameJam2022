@@ -9,15 +9,19 @@ public class NpcController : MonoBehaviour
     public bool alert;
     public NavMeshAgent agent;
     public GameObject[] patrolLocations;
-   
-    private int currentPatrolLocation = 0;
+    public bool canMove = true;
+ 
+
     private GameObject player;
+    private int currentPatrolLocation = 0;
     private SpriteRenderer spriteRenderer;
+    private GameState gameState;
     private Vector3 currentPosition;
     private float moveSpeed;
     private Vector3 moveTo;
     private Vector3 direction;
     private Animator anim;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,7 @@ public class NpcController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
+        gameState = FindObjectOfType<GameState>();
     }
 
     // Update is called once per frame
@@ -33,7 +38,15 @@ public class NpcController : MonoBehaviour
         if (!alert)
         {
             // patroll betweem Patrol location objects
-            agent.speed = 1;
+            if (canMove)
+            {
+                agent.speed = 1;
+            }
+            else
+            {
+                agent.speed = 0;
+            }
+            
             if (transform.position == moveTo)
             {
                 currentPatrolLocation++;
@@ -48,18 +61,25 @@ public class NpcController : MonoBehaviour
         {
             // chase after player
             moveTo = (player.transform.position);
-            agent.speed = 2;
+            if (canMove)
+            {
+                agent.speed = 2;
+            }
+            else
+            {
+                agent.speed = 0;
+            }
         }
-        
+
         moveTo.y = transform.position.y;
         agent.destination = moveTo;
-        direction =  transform.position - moveTo;
+        direction = agent.velocity.normalized;
         // flip sprite to match move direction
-        if (moveTo.x > 0)
+        if (direction.x > 0)
         {
             spriteRenderer.flipX = true;
         }
-        else if (moveTo.x < 0)
+        else if (direction.x < 0)
         {
             spriteRenderer.flipX = false;
         }
@@ -83,5 +103,25 @@ public class NpcController : MonoBehaviour
         {
             transform.Rotate(0, -45, 0);
         }
+        ProximityCheck();
+    }
+
+    void ProximityCheck()
+    {
+        if (!alert)
+        {
+            if (Vector3.Distance(transform.position, player.transform.position) < 4)
+            {
+                gameState.boomBoxOn = true;
+            }
+        }
+        else if (alert)
+        {
+            if((Vector3.Distance(transform.position, player.transform.position) < 1))
+            {
+                player.GetComponent<PlayerController>().playerCaught = true;
+            }
+        }
+
     }
 }

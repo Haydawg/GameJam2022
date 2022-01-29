@@ -6,7 +6,9 @@ public class GameState : MonoBehaviour
 {
     public bool boomBoxOn;
 
+    private float cameraMoveSpeed = 2;
     private bool firstAlerted = false;
+    private bool unAlerted = true;
     private NpcController[] enemies;
     private PlayerController player;
     private GameObject cameraPivot;
@@ -29,7 +31,10 @@ public class GameState : MonoBehaviour
         {
             case true:
                 player.boomBoxOn = true;
-                StartCoroutine(EnemyAlerted(5));
+                if (unAlerted)
+                {
+                    StartCoroutine(EnemyAlerted(8));
+                }
                 break;
             case false:
                 player.boomBoxOn = false;
@@ -41,7 +46,7 @@ public class GameState : MonoBehaviour
         }
         if (firstAlerted)
         {
-            cameraPivot.transform.position = closestEnemy.transform.position;
+            cameraPivot.transform.position = Vector3.MoveTowards(cameraPivot.transform.position, closestEnemy.transform.position, cameraMoveSpeed *Time.deltaTime);
         }
     }
     GameObject GetClosestEnemy()
@@ -60,14 +65,19 @@ public class GameState : MonoBehaviour
     }
     IEnumerator EnemyAlerted(int time)
     {
+        unAlerted = false;
+        player.canMove = false;
         cameraController.firstAlerted = true;
         closestEnemy = GetClosestEnemy();
+        closestEnemy.GetComponent<NpcController>().canMove = false;
         firstAlerted = true;
         yield return new WaitForSeconds(time);
         cameraController.firstAlerted = false;
         firstAlerted = false;
+        player.canMove = true;
         foreach (NpcController enemy in enemies)
         {
+            enemy.canMove = true;
             enemy.alert = true;
         }
     }

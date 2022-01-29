@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource feet;
     public AudioClip[] quietFootStepClips;
     public AudioClip[] loudFootStepClips;
+    public bool canMove = true;
+    public bool playerCaught = false;
+
 
     private Vector3 moveTo;
     private SpriteRenderer spriteRenderer;
@@ -29,11 +32,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*switch (boomBoxOn)
+        switch (boomBoxOn)
         {
             case true:
                 playerSpeed = 2;
-                feet.clip = loudFootStepClips[Random.Range(0, loudFootStepClips.Length)];
+                //feet.clip = loudFootStepClips[Random.Range(0, loudFootStepClips.Length)];
                 boomBoxAudio.volume = boomBoxVolume;
                 if (!boomBoxAudio.isPlaying)
                 {
@@ -43,22 +46,40 @@ public class PlayerController : MonoBehaviour
 
              case false:
                 playerSpeed = 1;
-                feet.clip = quietFootStepClips[Random.Range(0, quietFootStepClips.Length)];
+                //feet.clip = quietFootStepClips[Random.Range(0, quietFootStepClips.Length)];
                 if (boomBoxAudio.isPlaying)
                 {
                     boomBoxAudio.Stop();
                 }
                 break;
         }
-        */
+        
         // Player Movement
         moveTo = Vector3.zero;
         float z = Input.GetAxis("Vertical");
         float x = Input.GetAxis("Horizontal");
         moveTo += (transform.forward * z * playerSpeed * Time.deltaTime);
         moveTo += (transform.right * x * playerSpeed * Time.deltaTime);
+        
+        if (moveTo == Vector3.zero)
+        {
+            anim.speed = 0;
+            Debug.Log(anim.speed);
+        }
+        else
+        {
+            anim.speed = 1;
+        }
+        if (canMove)
+        {
+            controller.Move(moveTo);
+            anim.speed = 1;
+        }
+        else
+        {
+            anim.speed = 0;
+        }
 
-        controller.Move(moveTo);
         // flip sprite to match move direction
         if (moveTo.x > 0)
         {

@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 9a1992c49d98de64f9f28d66b470106f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6820143052827007101
+    second: SneakingNinjaSprites_0
+  - first:
+      213: -2219759989022307816
+    second: SneakingNinjaSprites_1
+  - first:
+      213: 7964313193483086620
+    second: SneakingNinjaSprites_2
+  - first:
+      213: 7507061631480913915
+    second: SneakingNinjaSprites_3
+  - first:
+      213: -6025532912617846990
+    second: SneakingNinjaSprites_4
+  - first:
+      213: 8137135645584080368
+    second: SneakingNinjaSprites_5
+  - first:
+      213: 2293266402206360864
+    second: SneakingNinjaSprites_6
+  - first:
+      213: -4775718380042456800
+    second: SneakingNinjaSprites_7
+  - first:
+      213: 7673492762254152874
+    second: SneakingNinjaSprites_8
+  - first:
+      213: 1457952115725097616
+    second: SneakingNinjaSprites_9
+  - first:
+      213: -8357299558337185680
+    second: SneakingNinjaSprites_10
+  - first:
+      213: -4678172168769360630
+    second: SneakingNinjaSprites_11
+  - first:
+      213: 3424791378131404529
+    second: SneakingNinjaSprites_12
+  - first:
+      213: -2457520346366274233
+    second: SneakingNinjaSprites_13
+  - first:
+      213: 8215118206106739593
+    second: SneakingNinjaSprites_14
+  - first:
+      213: 4299217563734851917
+    second: SneakingNinjaSprites_15
+  - first:
+      213: 7788693832044847828
+    second: SneakingNinjaSprites_16
+  - first:
+      213: 3045440741750841047
+    second: SneakingNinjaSprites_17
+  - first:
+      213: -2496066376709445474
+    second: SneakingNinjaSprites_18
+  - first:
+      213: -1994277223524402461
+    second: SneakingNinjaSprites_19
+  - first:
+      213: 3129270951188757837
+    second: SneakingNinjaSprites_20
+  - first:
+      213: -2939908121413462956
+    second: SneakingNinjaSprites_21
+  - first:
+      213: -3718677439133181887
+    second: SneakingNinjaSprites_22
+  - first:
+      213: -6544874148851220617
+    second: SneakingNinjaSprites_23
+  - first:
+      213: 6682491725563951910
+    second: SneakingNinjaSprites_24
+  - first:
+      213: 5474514727587731186
+    second: SneakingNinjaSprites_25
+  - first:
+      213: 9068822713845734674
+    second: SneakingNinjaSprites_26
+  - first:
+      213: -7015142315332743734
+    second: SneakingNinjaSprites_27
+  - first:
+      213: -9097599786463142082
+    second: SneakingNinjaSprites_28
+  - first:
+      213: -4887371558837328294
+    second: SneakingNinjaSprites_29
+  - first:
+      213: -673525739253914286
+    second: SneakingNinjaSprites_30
+  - first:
+      213: -7364105568138581533
+    second: SneakingNinjaSprites_31
+  - first:
+      213: 7208402978854003133
+    second: SneakingNinjaSprites_32
+  - first:
+      213: -8360957438005127425
+    second: SneakingNinjaSprites_33
+  - first:
+      213: 3667685345538888373
+    second: SneakingNinjaSprites_34
+  - first:
+      213: -6192425203142632290
+    second: SneakingNinjaSprites_35
+  - first:
+      213: -2849542347519275033
+    second: SneakingNinjaSprites_36
+  - first:
+      213: 3246253161734977354
+    second: SneakingNinjaSprites_37
+  - first:
+      213: 555971585168416238
+    second: SneakingNinjaSprites_38
+  - first:
+      213: -1985336513952200844
+    second: SneakingNinjaSprites_39
+  - first:
+      213: -4956067828645773990
+    second: SneakingNinjaSprites_40
+  - first:
+      213: 8020691893187361684
+    second: SneakingNinjaSprites_41
+  - first:
+      213: 1620116812898882121
+    second: SneakingNinjaSprites_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 5350
+        width: 488
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a43bffc04d131e0800000000000000
+      internalID: -2219759989022307816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_3
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 5350
+        width: 438
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff526b97c07e2860800000000000000
+      internalID: 7507061631480913915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_4
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 5381
+        width: 444
+        height: 755
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2370df89db1016ca0800000000000000
+      internalID: -6025532912617846990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_7
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 4399
+        width: 548
+        height: 675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021f34aaf6d39bdb0800000000000000
+      internalID: -4775718380042456800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_8
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 4445
+        width: 521
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa490b8e209bd7a60800000000000000
+      internalID: 7673492762254152874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_9
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 4451
+        width: 491
+        height: 659
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ad25589bfab3410800000000000000
+      internalID: 1457952115725097616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_26
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 2952
+        width: 516
+        height: 638
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dd4c5a53eeadd70800000000000000
+      internalID: 9068822713845734674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_27
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 2980
+        width: 516
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdc7c56b3535ae90800000000000000
+      internalID: -7015142315332743734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_28
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 3005
+        width: 516
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fd1330235deb180800000000000000
+      internalID: -9097599786463142082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_29
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1447
+        width: 413
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56672e26719c2cb0800000000000000
+      internalID: -4887371558837328294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_30
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1447
+        width: 413
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25520bc98e727a6f0800000000000000
+      internalID: -673525739253914286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_31
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 1447
+        width: 413
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9af92a0017dc990800000000000000
+      internalID: -7364105568138581533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_34
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 495
+        width: 482
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b250c8b36c36e230800000000000000
+      internalID: 3667685345538888373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_35
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 493
+        width: 482
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cd18c2616101aa0800000000000000
+      internalID: -6192425203142632290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SneakingNinjaSprites_36
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 493
+        width: 482
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef4eab15546478d0800000000000000
+      internalID: -2849542347519275033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4c789daddd94ca2449c474c6a9c28959
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

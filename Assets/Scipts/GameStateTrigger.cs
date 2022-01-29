@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameStateTrigger : MonoBehaviour
 {
+    public Vector3[] triggerLocations;
     GameState gameState;
     // Start is called before the first frame update
     void Start()
