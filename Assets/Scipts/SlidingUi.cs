@@ -9,7 +9,7 @@ public class SlidingUi : MonoBehaviour
     public Image topBar;
     public Image bottomBar;
     private RectTransform  rectTransform;
-    private int slideSpeed = 300;
+    private int slideSpeed = 350;
    
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class SlidingUi : MonoBehaviour
         }
         else
         {
-            slideSpeed = 600;
+            slideSpeed = 2500;
         }
         if (position.x > 300)
         {

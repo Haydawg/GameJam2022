@@ -5559,6 +5559,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.020000007, z: 0.00012919141}
   m_Center: {x: 0, y: 0, z: 0.00006459585}
+--- !u!1 &491246197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78d7a52e119b0d54dadceea3c1859706, type: 3}
+  m_PrefabInstance: {fileID: 1106285811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &491246198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491246197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0017452631, y: 0.010900366, z: 0.009743706}
+  m_Center: {x: -0.00006514878, y: 0.000006265474, z: 0.0047330577}
 --- !u!1001 &492609326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22314,6 +22332,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1861035465}
     m_Modifications:
+    - target: {fileID: 563890266015772910, guid: dac7e8a0112001d4b8fb0ee7feab2fb8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 563890266015772910, guid: dac7e8a0112001d4b8fb0ee7feab2fb8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 563890266015772910, guid: dac7e8a0112001d4b8fb0ee7feab2fb8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2579741862081311694, guid: dac7e8a0112001d4b8fb0ee7feab2fb8, type: 3}
       propertyPath: m_Name
       value: enemyalertslide
