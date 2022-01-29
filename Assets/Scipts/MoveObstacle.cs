@@ -5,16 +5,17 @@ using UnityEngine;
 public class MoveObstacle : MonoBehaviour
 {
     public float speed = 2.0f;
-    public float maxX = 1;
-    public float minX = 0;
+    public float max = 1;
+    public float min = 0;
+    public bool moveX = true;
     private bool isClosing;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        maxX += transform.position.x;
-        minX = transform.position.x;
+        max += transform.position.x;
+        min = transform.position.x;
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class MoveObstacle : MonoBehaviour
         float Offest = speed * Time.deltaTime;
         if (Vector3.Distance(transform.position, player.transform.position) < 2)
         {
-            if(Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (!isClosing)
                 {
@@ -35,19 +36,42 @@ public class MoveObstacle : MonoBehaviour
                 }
             }
         }
-        if (isClosing)
+
+        if (moveX)
         {
-            if (transform.position.x < maxX)
+            if (isClosing)
             {
-                transform.position = new Vector3(transform.position.x + Offest, transform.position.y , transform.position.z);
+                if (transform.position.x < max)
+                {
+                    transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
+                }
+            }
+            else
+            {
+                if (transform.position.x >= min)
+                {
+                    transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
+                }
             }
         }
         else
         {
-            if (transform.position.x >= minX)
+            if (isClosing)
             {
-                transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
+                if (transform.position.z < max)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
+                }
+            }
+
+            else
+            {
+                if (transform.position.z >= min)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
+                }
             }
         }
+        
     }
 }
