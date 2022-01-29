@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             transform.Rotate(0, 45, 0);

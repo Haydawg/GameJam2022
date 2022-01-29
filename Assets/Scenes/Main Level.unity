@@ -5486,9 +5486,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  max: 1
-  min: 0
+  max: 0
+  min: -1
   moveX: 1
+  openLeft: 1
+  isClosing: 1
 --- !u!208 &492609330
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6065,9 +6067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  max: 1
-  min: 0
+  max: 0
+  min: -1
   moveX: 1
+  openLeft: 1
+  isClosing: 1
 --- !u!208 &557538675
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9765,9 +9769,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  max: 1
-  min: 0
+  max: 0
+  min: -1
   moveX: 1
+  openLeft: 1
+  isClosing: 1
 --- !u!208 &833642852
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13948,9 +13954,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  max: 1
-  min: 0
+  max: 0
+  min: -1
   moveX: 0
+  openLeft: 1
+  isClosing: 1
 --- !u!208 &1366579834
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18145,6 +18153,8 @@ MonoBehaviour:
   max: 1
   min: 0
   moveX: 1
+  openLeft: 1
+  isClosing: 0
 --- !u!208 &1830247578
 NavMeshObstacle:
   m_ObjectHideFlags: 0

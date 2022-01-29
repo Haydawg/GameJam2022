@@ -5,17 +5,27 @@ using UnityEngine;
 public class MoveObstacle : MonoBehaviour
 {
     public float speed = 2.0f;
-    public float max = 1;
-    public float min = 0;
+    public float max;
+    public float min;
     public bool moveX = true;
-    private bool isClosing;
+    public bool openLeft = true;
+    public bool isClosing = true;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        max += transform.position.x;
-        min = transform.position.x;
+        if (moveX)
+        {
+            max += transform.position.x;
+            min += transform.position.x;
+        }
+        else
+        {
+            max += transform.position.z;
+            min += transform.position.z;
+        }
+
     }
 
     // Update is called once per frame
@@ -39,39 +49,79 @@ public class MoveObstacle : MonoBehaviour
 
         if (moveX)
         {
-            if (isClosing)
+            if (openLeft)
             {
-                if (transform.position.x < max)
+                if (isClosing)
                 {
-                    transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
+                    if (max > transform.position.x)
+                    {
+                        transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
+                    }
+                }
+                else
+                {
+                    if (min < transform.position.x)
+                    {
+                        transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
+                    }
                 }
             }
             else
             {
-                if (transform.position.x >= min)
+                if (isClosing)
                 {
-                    transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
+                    if (min < transform.position.x)
+                    {
+                        transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
+                    }
                 }
+                else
+                {
+                    if (max > transform.position.x)
+                    {
+                        transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
+                    }
+                } 
             }
         }
         else
         {
-            if (isClosing)
+            if (openLeft)
             {
-                if (transform.position.z < max)
+                if (isClosing)
                 {
-                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
+                    if (max > transform.position.z)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
+                    }
+                }
+                else
+                {
+                    if (min < transform.position.z)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
+                    }
                 }
             }
-
             else
             {
-                if (transform.position.z >= min)
+                if (isClosing)
                 {
-                    transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
+
+                    if (min < transform.position.z)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
+                    }
+                }
+
+                else
+                {
+                    if (max > transform.position.z)
+                    {
+                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
+                    }
                 }
             }
         }
-        
     }
 }
