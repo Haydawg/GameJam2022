@@ -2,24 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UiContoller : MonoBehaviour
 {
-    public GameObject alertPanel;
-    private RectTransform alertPanelRect;
+    
     // Start is called before the first frame update
     void Start()
     {
-        alertPanel.SetActive(false);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(alertPanel.activeSelf)
-        {
 
-        }    
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
