@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class NpcController : MonoBehaviour
 {
-    public SphereCollider triggerCollider;
     public bool alert;
     public NavMeshAgent agent;
     public GameObject[] patrolLocations;
@@ -18,7 +17,7 @@ public class NpcController : MonoBehaviour
     private GameState gameState;
     private Vector3 currentPosition;
     private float moveSpeed;
-    private Vector3 moveTo;
+    public Vector3 moveTo;
     private Vector3 direction;
     private Animator anim;
     
@@ -40,13 +39,12 @@ public class NpcController : MonoBehaviour
             // patroll betweem Patrol location objects
             if (canMove)
             {
-                agent.speed = 1;
+                agent.SetDestination(moveTo);
             }
             else
             {
-                agent.speed = 0;
+                agent.SetDestination(transform.position);
             }
-            
             if (transform.position == moveTo)
             {
                 currentPatrolLocation++;
@@ -59,16 +57,22 @@ public class NpcController : MonoBehaviour
         }
         else if (alert)
         {
+            agent.speed = 2;
             // chase after player
-            moveTo = (player.transform.position);
             if (canMove)
             {
+                moveTo = (player.transform.position);
                 agent.SetDestination(moveTo);
             }
             else
             {
+                Debug.Log(canMove);
                 agent.SetDestination(transform.position);
             }
+        }
+        else
+        {
+            agent.speed = 1;
         }
         agent.SetDestination(moveTo);
         moveTo.y = transform.position.y;

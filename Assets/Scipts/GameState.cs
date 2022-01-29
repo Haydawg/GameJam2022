@@ -69,15 +69,16 @@ public class GameState : MonoBehaviour
         player.canMove = false;
         cameraController.firstAlerted = true;
         closestEnemy = GetClosestEnemy();
+        closestEnemy.GetComponent<NpcController>().alert = true;
         closestEnemy.GetComponent<NpcController>().canMove = false;
         firstAlerted = true;
         yield return new WaitForSeconds(time);
         cameraController.firstAlerted = false;
         firstAlerted = false;
         player.canMove = true;
+        closestEnemy.GetComponent<NpcController>().canMove = true;
         foreach (NpcController enemy in enemies)
         {
-            enemy.canMove = true;
             enemy.alert = true;
         }
     }
