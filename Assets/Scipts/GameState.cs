@@ -39,7 +39,7 @@ public class GameState : MonoBehaviour
                 player.boomBoxOn = true;
                 if (unAlerted)
                 {
-                    StartCoroutine(EnemyAlerted(5));
+                    StartCoroutine(EnemyAlerted(7));
                 }
                 break;
             case false:
@@ -74,13 +74,12 @@ public class GameState : MonoBehaviour
         unAlerted = false;
         player.canMove = false;
         cameraController.firstAlerted = true;
-        alertSlide.SetActive(true);
         closestEnemy = GetClosestEnemy();
         closestEnemy.GetComponent<NpcController>().alert = true;
         closestEnemy.GetComponent<NpcController>().canMove = false;
         firstAlerted = true;
         yield return new WaitForSeconds(time / 2);
-        Debug.Log(alertSlide.activeSelf);
+        alertSlide.SetActive(true);
         yield return new WaitForSeconds(time / 2);
         cameraController.firstAlerted = false;
         firstAlerted = false;
@@ -90,5 +89,6 @@ public class GameState : MonoBehaviour
         {
             enemy.alert = true;
         }
-    }   
+    }
+   
 }

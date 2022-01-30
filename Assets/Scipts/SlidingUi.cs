@@ -47,12 +47,12 @@ public class SlidingUi : MonoBehaviour
         {
             slideSpeed = 2500;
         }
-        if (position.x > 300)
+        if (position.x > 200)
         {
             if (bottomBar.fillAmount > 0)
             {
-                bottomBar.fillAmount -= (2 * Time.deltaTime);
-                topBar.fillAmount -= (2 * Time.deltaTime);
+                bottomBar.fillAmount -= (3 * Time.deltaTime);
+                topBar.fillAmount -= (3 * Time.deltaTime);
             }
         }
         position.x += slideSpeed * Time.deltaTime;

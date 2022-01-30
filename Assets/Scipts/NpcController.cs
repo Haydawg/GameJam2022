@@ -9,7 +9,8 @@ public class NpcController : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject[] patrolLocations;
     public bool canMove = true;
- 
+    public AudioSource audioSource;
+    public AudioClip[] footsteps;
     private GameObject player;
     private int currentPatrolLocation = 0;
     private SpriteRenderer spriteRenderer;
@@ -65,7 +66,6 @@ public class NpcController : MonoBehaviour
             }
             else
             {
-                Debug.Log(canMove);
                 agent.SetDestination(transform.position);
             }
         }
@@ -117,5 +117,9 @@ public class NpcController : MonoBehaviour
             }
         }
 
+    }
+    public void PlayFootStep()
+    {
+        audioSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
     }
 }

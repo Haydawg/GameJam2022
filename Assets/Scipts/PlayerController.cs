@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Sprite[] sprites;
     public float playerSpeed = 1;
     public bool boomBoxOn = false;
     public float boomBoxVolume = 50;
@@ -14,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip[] loudFootStepClips;
     public bool canMove = true;
     public bool playerCaught = false;
-
+    public GameObject music;
 
     private Vector3 moveTo;
     private SpriteRenderer spriteRenderer;
@@ -44,6 +43,7 @@ public class PlayerController : MonoBehaviour
                 if (!boomBoxAudio.isPlaying)
                 {
                     boomBoxAudio.Play();
+                    music.SetActive(true);
                 }
                 break;
 
@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
                 if (boomBoxAudio.isPlaying)
                 {
                     boomBoxAudio.Stop();
+                    music.SetActive(false);
                 }
                 break;
         }
@@ -96,5 +97,17 @@ public class PlayerController : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(rotationVector);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.time * 0.01f);
+    }
+    public void FootSounds()
+    {
+        if (!boomBoxOn)
+        {
+            feet.PlayOneShot(quietFootStepClips[Random.Range(0, quietFootStepClips.Length)]);
+        }
+        else if (boomBoxOn)
+        {
+            feet.PlayOneShot(quietFootStepClips[Random.Range(0, loudFootStepClips.Length)]);
+        }
+        
     }
 }
