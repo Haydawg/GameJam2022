@@ -104,7 +104,7 @@ public class NpcController : MonoBehaviour
     {
         if (!alert)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) < 2)
+            if (Vector3.Distance(transform.position, player.transform.position) < 1.5)
             {
                 gameState.boomBoxOn = true;
             }
