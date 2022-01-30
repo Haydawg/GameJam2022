@@ -104,14 +104,14 @@ public class NpcController : MonoBehaviour
     {
         if (!alert)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) < 1)
+            if (Vector3.Distance(transform.position, player.transform.position) < 2)
             {
                 gameState.boomBoxOn = true;
             }
         }
         else if (alert)
         {
-            if((Vector3.Distance(transform.position, player.transform.position) < 0.2f))
+            if((Vector3.Distance(transform.position, player.transform.position) < 0.5f))
             {
                 player.GetComponent<PlayerController>().playerCaught = true;
             }

@@ -58,7 +58,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (max > transform.position.x)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
                     }
                 }
@@ -66,7 +66,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (min < transform.position.x)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
                     }
                 }
@@ -77,7 +77,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (min < transform.position.x)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x - Offest, transform.position.y, transform.position.z);
                     }
                 }
@@ -85,7 +85,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (max > transform.position.x)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x + Offest, transform.position.y, transform.position.z);
                     }
                 } 
@@ -99,7 +99,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (max > transform.position.z)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
                     }
                 }
@@ -107,7 +107,7 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (min < transform.position.z)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
                     }
                 }
@@ -119,7 +119,7 @@ public class MoveObstacle : MonoBehaviour
 
                     if (min < transform.position.z)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Offest);
                     }
                 }
@@ -128,11 +128,18 @@ public class MoveObstacle : MonoBehaviour
                 {
                     if (max > transform.position.z)
                     {
-                        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+                        PlaySound();
                         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Offest);
                     }
                 }
             }
+        }
+    }
+    void PlaySound()
+    {
+        if(!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
         }
     }
 }

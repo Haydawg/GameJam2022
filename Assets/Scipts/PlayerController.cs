@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 1;
     public bool boomBoxOn = false;
     public float boomBoxVolume = 50;
+    public GameObject losePanel;
     public AudioSource boomBoxAudio;
     public AudioSource feet;
     public AudioClip[] quietFootStepClips;
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     public bool playerCaught = false;
     public GameObject music;
-
+    public ParticleSystem notes;
     private Vector3 moveTo;
     private SpriteRenderer spriteRenderer;
     private CharacterController controller;
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        losePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class PlayerController : MonoBehaviour
                 if (!boomBoxAudio.isPlaying)
                 {
                     boomBoxAudio.Play();
-                    music.SetActive(true);
+                    notes.Play();
                 }
                 break;
 
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour
                 {
                     boomBoxAudio.Stop();
                     music.SetActive(false);
+                    notes.Pause();
                 }
                 break;
         }
@@ -97,7 +101,14 @@ public class PlayerController : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(rotationVector);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.time * 0.01f);
+        if(playerCaught)
+        {
+            Time.timeScale = 0;
+            losePanel.SetActive(true);
+        }
+        Debug.Log(Time.timeScale);
     }
+    
     public void FootSounds()
     {
         if (!boomBoxOn)
@@ -108,6 +119,5 @@ public class PlayerController : MonoBehaviour
         {
             feet.PlayOneShot(quietFootStepClips[Random.Range(0, loudFootStepClips.Length)]);
         }
-        
     }
 }

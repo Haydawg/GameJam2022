@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UiContoller : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip[] clips; 
     
     // Start is called before the first frame update
     void Start()
@@ -18,12 +20,21 @@ public class UiContoller : MonoBehaviour
     {
 
     }
-    public void StartGame()
+    public void LoadLevel(int index)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(index);
+    }
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void playclick()
+    {
+        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
     }
 }
